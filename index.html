@@ -1,164 +1,165 @@
 <!DOCTYPE html>
-
-<html lang="th">
+<html lang="th" class="scroll-smooth">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>kennykun studio</title>
+<title>kennykun - รับทำป้าย & บล็อค ดีไซน์โทนฟ้า</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
-
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Mitr:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
 <style>
-body{
-    font-family:'Mitr',sans-serif;
-    background:linear-gradient(180deg,#f9fbff 0%,#eef6ff 100%);
-    color:#2b5f9e;
-    overflow-x:hidden;
+body {
+    font-family: 'Kanit', sans-serif;
+    background: linear-gradient(180deg, #050a18 0%, #07122a 100%);
+    color: #fff;
+    overflow-x: hidden;
 }
 
-.font-eng{font-family:'Fredoka',sans-serif}
-
-/* กล่อง */
-.card{
-    border-radius:20px;
-    box-shadow:0 15px 40px -10px rgba(129,195,253,.4);
+/* heading */
+.heading-style {
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    font-weight: 800;
 }
 
-/* ปุ่ม */
-.btn{
-    transition:.2s ease;
+/* glow */
+@keyframes glow {
+    from { box-shadow: 0 0 10px rgba(0, 217, 255, 0.1); }
+    to { box-shadow: 0 0 30px rgba(0, 200, 255, 0.25); }
 }
-.btn:hover{
-    transform:translateY(-2px);
+.animate-glow {
+    animation: glow 3s infinite alternate;
 }
 
-/* scroll */
-::-webkit-scrollbar{width:6px}
-::-webkit-scrollbar-thumb{background:#81c3fd;border-radius:10px}
+/* cute hover */
+.group:hover {
+    transform: translateY(-3px);
+    transition: 0.25s;
+}
+
+/* grid bg */
+.bg-grid {
+    background-image: radial-gradient(circle, rgba(0,217,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* scrollbar */
+::-webkit-scrollbar { width:5px; }
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#2563eb,#06b6d4);
+    border-radius:10px;
+}
 </style>
-
 </head>
-<body>
 
-<main class="max-w-[500px] mx-auto px-4 py-12 flex flex-col gap-6">
+<body class="bg-grid">
 
-<!-- HEADER -->
+<!-- NAV -->
+<nav class="fixed top-0 w-full bg-[#050a18]/90 backdrop-blur-md py-3 z-50">
+<div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+<span class="heading-style text-lg bg-gradient-to-r from-white to-cyan-300 text-transparent bg-clip-text">
+KENNYKUN
+</span>
 
-<section>
-<div class="card bg-blue-300 p-6 text-white">
+<a href="https://lin.ee/t0qYbAl" target="_blank"
+class="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-lg text-xs font-bold">
+ทักแชท
+</a>
+</div>
+</nav>
 
-<h1 class="font-eng text-4xl font-bold leading-tight">
-kennykun<br><span class="text-2xl ml-2">studio</span>
+<!-- HERO -->
+<header class="min-h-[85vh] flex items-center justify-center text-center pt-20 px-4">
+<div>
+<h1 class="heading-style text-5xl sm:text-7xl mb-6">
+KENNYKUN <br>
+<span class="bg-gradient-to-r from-blue-600 to-cyan-300 bg-clip-text text-transparent">
+DESIGN SHOP
+</span>
 </h1>
 
-<div class="bg-blue-800 inline-block px-3 py-1 rounded-full mt-3 text-xs">
-รับทำป้ายและบล็อค รองานได้ทักโลด
-</div>
-
-</div>
-
-<p class="mt-3 text-sm">
-ร้าน kennykun รับทำป้าย บล็อค และออกแบบหัวป้าย หลากหลายสไตล์ ทั้งน่ารัก โทนมืด และคอส
+<p class="text-gray-300 mb-8">
+รับทำป้ายและบล็อค รองานได้ทักโลด 💙 <br>
+ดีไซน์น่ารัก เท่ หรือคอสเพลย์ ครบทุกสไตล์
 </p>
-</section>
+
+<a href="https://drive.google.com/drive/folders/1kwUdV_5iMh-3eQeRf86b64J0DNKT2O0Y"
+class="px-6 py-3 bg-white text-black rounded-xl font-bold">
+ชมผลงาน
+</a>
+</div>
+</header>
 
 <!-- SERVICES -->
+<section class="py-20 px-4">
+<div class="max-w-5xl mx-auto text-center mb-10">
+<h3 class="text-3xl font-black">งานที่รับทำ</h3>
+</div>
 
-<section class="card bg-white p-5">
-<h2 class="font-eng text-lg font-bold text-blue-400 mb-2">
-Design Services
-</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="group p-4 bg-white/5 rounded-xl">
+<h3 class="font-bold">ป้ายดีไซน์</h3>
+<p class="text-xs text-gray-400">น่ารัก / มืด / คอส</p>
+</div>
 
-<p class="font-semibold text-sm">งานที่รับทำ</p>
+<div class="group p-4 bg-white/5 rounded-xl">
+<h3 class="font-bold">บล็อคสุดเก๋</h3>
+<p class="text-xs text-gray-400">เลย์เอาท์เท่</p>
+</div>
 
-<ul class="text-xs mt-2 space-y-1">
-<li>• ป้ายแนวน่ารัก / มืด / คอส</li>
-<li>• บล็อคสุดเก๋</li>
-<li>• ออกแบบหัวป้าย</li>
-<li>• งานอื่น ๆ สอบถามได้</li>
-</ul>
+<div class="group p-4 bg-white/5 rounded-xl">
+<h3 class="font-bold">หัวป้าย</h3>
+<p class="text-xs text-gray-400">โดดเด่นสะดุดตา</p>
+</div>
 
-<div class="bg-blue-100 p-3 mt-3 rounded text-xs">
-รับออกแบบตามบรีฟ ปรับได้ตามต้องการ ✨
+<div class="group p-4 bg-white/5 rounded-xl">
+<h3 class="font-bold">งานอื่นๆ</h3>
+<p class="text-xs text-gray-400">ทักมาคุยได้</p>
+</div>
 </div>
 </section>
 
 <!-- PORTFOLIO -->
+<section class="py-20 px-4 text-center">
+<h3 class="text-3xl font-black mb-6">ตัวอย่างงาน</h3>
 
-<section class="card bg-blue-400 text-white p-5 text-center">
-<h2 class="font-eng text-lg font-bold">Portfolio</h2>
+<a href="https://drive.google.com/drive/folders/1kwUdV_5iMh-3eQeRf86b64J0DNKT2O0Y"
+class="px-6 py-3 border rounded-xl">
+ดูผลงานทั้งหมด
+</a>
+</section>
 
-<p class="text-xs mb-3">
-ตัวอย่างงาน คลิกดูได้เลย
+<!-- CONDITION -->
+<section class="py-20 px-4 text-center">
+<h3 class="text-3xl font-black mb-10">เงื่อนไขการสั่งงาน</h3>
+
+<p class="text-gray-300 mb-2">รองาน 1-2 วัน หรือมากกว่า ตามบรีฟ</p>
+<p class="text-gray-300">งานเร่ง +20 บาท</p>
+</section>
+
+<!-- ORDER -->
+<section class="py-20 px-4 text-center">
+<h3 class="text-3xl font-black mb-10">ขั้นตอนการสั่งงาน</h3>
+
+<p class="text-gray-300">
+แจ้งงาน → บรีฟรายละเอียด → ชำระเงิน → รอรับงาน
+</p>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-20 text-center">
+<h3 class="heading-style text-2xl mb-4">KENNYKUN</h3>
+
+<p class="text-gray-400 mb-6">
+"รับทำป้ายและบล็อค รองานได้ทักโลด 💙"
 </p>
 
-<button onclick="openLink()" 
-class="btn bg-white text-blue-600 px-4 py-2 rounded-full text-sm font-semibold">
-ดูผลงาน </button>
-
-</section>
-
-<!-- PRICING -->
-
-<section class="card bg-yellow-100 p-5 text-center">
-<h3 class="font-bold text-lg">ราคาขึ้นอยู่กับรายละเอียดงาน</h3>
-<p class="text-xs">(ประเมินจากบรีฟ)</p>
-</section>
-
-<!-- PROCESS -->
-
-<section class="card bg-white p-5 text-xs">
-
-<h3 class="font-bold text-blue-400 mb-2">Process & Conditions</h3>
-
-<ul class="list-disc pl-4 space-y-1">
-<li>รองาน 1–2 วัน หรือมากกว่า ตามบรีฟ</li>
-<li>งานเร่ง +20 ของราคา</li>
-<li>ส่งเรฟหรือแนวงานได้</li>
-</ul>
-
-<h4 class="font-bold mt-4">ขั้นตอนการสั่ง</h4>
-<ol class="list-decimal pl-4 space-y-1">
-<li>แจ้งงาน</li>
-<li>บรีฟรายละเอียด</li>
-<li>ชำระเงิน (มัดจำได้)</li>
-<li>รอรับงาน</li>
-</ol>
-
-</section>
-
-<!-- RULES -->
-
-<section class="card bg-blue-800 text-white p-5 text-xs">
-<h3 class="font-bold mb-2">Rules</h3>
-
-<ul class="space-y-1">
-<li>• โอนแล้วไม่คืนเงิน</li>
-<li>• เริ่มงานแล้วเปลี่ยนโทนสีไม่ได้</li>
-<li>• ห้ามใช้ผลงานคนอื่นมาบรีฟ</li>
-</ul>
-</section>
-
-<!-- CONTACT -->
-
-<section class="text-center">
-<h3 class="font-eng text-lg font-bold text-blue-400 mb-2">Contact</h3>
-
-<a href="https://www.facebook.com/apun.sukarsa.2024" target="_blank"
-class="btn inline-block bg-blue-400 text-white px-4 py-2 rounded-full">
-Facebook </a>
-
-</section>
-
-</main>
-
-<script>
-function openLink(){
-window.open("https://drive.google.com/drive/folders/1kwUdV_5iMh-3eQeRf86b64J0DNKT2O0Y?usp=drive_link","_blank");
-}
-</script>
+<a href="https://www.facebook.com/apun.sukarsa.2024"
+class="text-blue-400 underline">
+Facebook ติดต่อ
+</a>
+</footer>
 
 </body>
 </html>
