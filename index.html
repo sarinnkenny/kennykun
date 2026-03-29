@@ -9,39 +9,60 @@
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
+<style>
 body {
     font-family: 'Kanit', sans-serif;
     background-color: #050a18;
     color: #ffffff;
     overflow-x: hidden;
 }
-
 .heading-style {
     letter-spacing: -0.02em;
     text-transform: uppercase;
     font-weight: 800;
 }
 
-/* glow เดิม แต่เนียนขึ้น */
+/* Effect: Digital Scanlines Blue */
+.effect-game {
+    position: relative;
+    background-image: linear-gradient(0deg, transparent 24%, rgba(0, 217, 255, 0.05) 25%, rgba(0, 217, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 217, 255, 0.05) 75%, rgba(0, 217, 255, 0.05) 76%, transparent 77%, transparent), 
+                      linear-gradient(90deg, transparent 24%, rgba(0, 217, 255, 0.05) 25%, rgba(0, 217, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 217, 255, 0.05) 75%, rgba(0, 217, 255, 0.05) 76%, transparent 77%, transparent);
+    background-size: 30px 30px;
+}
+
+/* Sparkles */
+@keyframes sparkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+.sparkle-dot {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #00d9ff;
+    border-radius: 50%;
+    filter: blur(1px);
+    animation: sparkle 3s infinite;
+}
+
+/* Glow */
+.animate-glow {
+    animation: glow 3s ease-in-out infinite alternate;
+}
 @keyframes glow {
     from { box-shadow: 0 0 10px rgba(0, 217, 255, 0.15); }
     to { box-shadow: 0 0 25px rgba(0, 149, 255, 0.35); }
 }
-.animate-glow {
-    animation: glow 3s ease-in-out infinite alternate;
+
+/* Grid */
+.bg-grid {
+    background-size: 40px 40px;
+    background-image: radial-gradient(circle, rgba(0, 217, 255, 0.03) 1px, transparent 1px);
 }
 
-/* hover ลื่นขึ้น */
-.group {
-    transition: all 0.25s ease;
-}
-
-/* scrollbar */
-::-webkit-scrollbar { width:5px; }
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(#2563eb, #06b6d4);
-    border-radius: 10px;
-}
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #050a18; }
+::-webkit-scrollbar-thumb { background: linear-gradient(#2563eb, #06b6d4); border-radius: 10px; }
 </style>
 </head>
 
