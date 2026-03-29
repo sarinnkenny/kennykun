@@ -1,31 +1,37 @@
 <!DOCTYPE html>
-<html lang="th" class="scroll-smooth">
+<html lang="th">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>kennykun - รับทำป้าย & บล็อค</title>
-
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+<title>Effect เหมือนต้นฉบับ</title>
 <style>
-<style>
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700;800&display=swap');
+
 body {
+    margin: 0;
+    padding: 0;
     font-family: 'Kanit', sans-serif;
-    background-color: #050a18;
+    background-color: #050a18; /* สีพื้นดำเข้ม */
     color: #ffffff;
     overflow-x: hidden;
 }
+
 .heading-style {
     letter-spacing: -0.02em;
     text-transform: uppercase;
     font-weight: 800;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 50px;
 }
 
-/* Effect: Digital Scanlines Blue */
+/* Background Effect: Scanlines + Glow */
 .effect-game {
     position: relative;
-    background-image: linear-gradient(0deg, transparent 24%, rgba(0, 217, 255, 0.05) 25%, rgba(0, 217, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 217, 255, 0.05) 75%, rgba(0, 217, 255, 0.05) 76%, transparent 77%, transparent), 
+    width: 100%;
+    min-height: 100vh;
+    background-color: #050a18;
+    background-image: linear-gradient(0deg, transparent 24%, rgba(0, 217, 255, 0.05) 25%, rgba(0, 217, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 217, 255, 0.05) 75%, rgba(0, 217, 255, 0.05) 76%, transparent 77%, transparent),
                       linear-gradient(90deg, transparent 24%, rgba(0, 217, 255, 0.05) 25%, rgba(0, 217, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 217, 255, 0.05) 75%, rgba(0, 217, 255, 0.05) 76%, transparent 77%, transparent);
     background-size: 30px 30px;
 }
@@ -45,7 +51,7 @@ body {
     animation: sparkle 3s infinite;
 }
 
-/* Glow */
+/* Glow effect */
 .animate-glow {
     animation: glow 3s ease-in-out infinite alternate;
 }
@@ -54,141 +60,46 @@ body {
     to { box-shadow: 0 0 25px rgba(0, 149, 255, 0.35); }
 }
 
-/* Grid */
+/* Grid Layer */
 .bg-grid {
     background-size: 40px 40px;
     background-image: radial-gradient(circle, rgba(0, 217, 255, 0.03) 1px, transparent 1px);
 }
 
+/* Scrollbar */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: #050a18; }
 ::-webkit-scrollbar-thumb { background: linear-gradient(#2563eb, #06b6d4); border-radius: 10px; }
+
+/* Button style */
+a.fb-button {
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 30px auto;
+    color: #00d9ff;
+    border: 2px solid #00d9ff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+a.fb-button:hover {
+    background: #00d9ff;
+    color: #050a18;
+}
 </style>
 </head>
-
-<body>
-
-<!-- NAV -->
-<nav class="fixed top-0 w-full z-50 bg-[#050a18]/90 backdrop-blur-md py-3 border-b border-white/5">
-<div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
-
-<span class="heading-style text-lg bg-gradient-to-r from-white to-cyan-300 text-transparent bg-clip-text">
-KENNYKUN
-</span>
-
-<a href="https://www.facebook.com/apun.sukarsa.2024" target="_blank"
-class="px-5 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-xs font-bold">
-ทักแชท
-</a>
-
-</div>
-</nav>
-
-<!-- HERO -->
-<header class="min-h-[85vh] flex items-center justify-center text-center pt-20 px-4">
-<div class="max-w-3xl">
-
-<h1 class="heading-style text-5xl sm:text-7xl mb-6 leading-none">
-KENNYKUN <br>
-<span class="bg-gradient-to-r from-blue-600 via-cyan-400 to-white bg-clip-text text-transparent">
-DESIGN SHOP
-</span>
-</h1>
-
-<p class="text-gray-300 mb-10 leading-relaxed">
-รับทำป้ายและบล็อค รองานได้ทักโลด 💙 <br>
-ดีไซน์น่ารัก เท่ มืด หรือคอสเพลย์ ครบทุกสไตล์
-</p>
-
-<div class="flex justify-center gap-4 flex-wrap">
-<a href="https://drive.google.com/drive/folders/1kwUdV_5iMh-3eQeRf86b64J0DNKT2O0Y"
-class="px-6 py-3 bg-white text-[#050a18] rounded-xl font-bold">
-ชมผลงาน
-</a>
-
-<a href="https://www.facebook.com/apun.sukarsa.2024"
-class="px-6 py-3 border border-white/10 rounded-xl">
-สั่งงานเลย
-</a>
+<body class="bg-grid">
+<div class="effect-game">
+    <h1 class="heading-style animate-glow">ยินดีต้อนรับ</h1>
+    <a href="https://www.facebook.com" target="_blank" class="fb-button">ไป Facebook</a>
 </div>
 
-</div>
-</header>
-
-<!-- SERVICES -->
-<section class="py-20 px-4">
-<div class="max-w-6xl mx-auto">
-
-<h3 class="text-3xl font-black text-center mb-12">งานที่รับทำ</h3>
-
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-
-<div class="group p-5 bg-white/5 border border-white/5 rounded-2xl">
-<h3 class="font-bold mb-1">ป้ายดีไซน์</h3>
-<p class="text-xs text-gray-400">น่ารัก / มืด / คอส</p>
-</div>
-
-<div class="group p-5 bg-white/5 border border-white/5 rounded-2xl">
-<h3 class="font-bold mb-1">บล็อคสุดเก๋</h3>
-<p class="text-xs text-gray-400">เลย์เอาท์สวย เท่</p>
-</div>
-
-<div class="group p-5 bg-white/5 border border-white/5 rounded-2xl">
-<h3 class="font-bold mb-1">หัวป้าย</h3>
-<p class="text-xs text-gray-400">โดดเด่นสะดุดตา</p>
-</div>
-
-<div class="group p-5 bg-white/5 border border-white/5 rounded-2xl">
-<h3 class="font-bold mb-1">งานอื่นๆ</h3>
-<p class="text-xs text-gray-400">ทักมาคุยได้เลย</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- PORTFOLIO -->
-<section class="py-20 px-4 text-center">
-<h3 class="text-3xl font-black mb-6">ตัวอย่างงาน</h3>
-
-<a href="https://drive.google.com/drive/folders/1kwUdV_5iMh-3eQeRf86b64J0DNKT2O0Y"
-class="px-6 py-3 border border-white/10 rounded-xl">
-ดูผลงานทั้งหมด
-</a>
-</section>
-
-<!-- CONDITION -->
-<section class="py-20 px-4 text-center">
-<h3 class="text-3xl font-black mb-10">เงื่อนไข</h3>
-
-<p class="text-gray-300 mb-2">รองาน 1-2 วัน หรือมากกว่า ตามบรีฟ</p>
-<p class="text-gray-300">งานเร่ง +20 บาท</p>
-</section>
-
-<!-- ORDER -->
-<section class="py-20 px-4 text-center">
-<h3 class="text-3xl font-black mb-10">ขั้นตอนการสั่ง</h3>
-
-<p class="text-gray-300">
-แจ้งงาน → บรีฟ → ชำระเงิน → รอรับงาน
-</p>
-</section>
-
-<!-- FOOTER -->
-<footer class="py-20 text-center border-t border-white/5">
-
-<h3 class="heading-style text-2xl mb-4">KENNYKUN</h3>
-
-<p class="text-gray-400 mb-6">
-"รับทำป้ายและบล็อค รองานได้ทักโลด 💙"
-</p>
-
-<a href="https://www.facebook.com/apun.sukarsa.2024"
-class="text-cyan-400 underline">
-Facebook ติดต่อ
-</a>
-
-</footer>
+<!-- Sparkle dots (ตัวอย่าง) -->
+<div class="sparkle-dot" style="top:10%; left:20%;"></div>
+<div class="sparkle-dot" style="top:30%; left:50%;"></div>
+<div class="sparkle-dot" style="top:70%; left:80%;"></div>
 
 </body>
 </html>
